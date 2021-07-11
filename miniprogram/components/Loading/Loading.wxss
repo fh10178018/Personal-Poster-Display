@@ -1,0 +1,15 @@
+
+.spinner {
+  border: 5rpx solid white;
+  border-right-color: transparent;
+  border-radius: 50%;
+  height: 30rpx;
+  width: 30rpx;
+  animation: rotateArround 1s infinite;
+}
+
+@keyframes rotateArround {
+	from {transform: rotateZ(0deg); }
+	to {transform: rotateZ(360deg);}
+}
+

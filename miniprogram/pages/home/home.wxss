@@ -1,0 +1,152 @@
+.shadow-warp:before, .shadow-warp:after {
+  position: absolute;
+  content: "";
+  top: 20rpx;
+  bottom: 30rpx;
+  left: 20rpx;
+  width: 50%;
+  box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+.shadow-warp:after {
+  right: 20rpx;
+  left: auto;
+  transform: rotate(3deg);
+}
+.padding {
+  padding: 30rpx;
+}
+.flex {
+  display: flex;
+}
+.shadow-warp {
+  position: relative;
+}
+.bg-white {
+  background-color: white;
+}
+.text-center {
+  text-align: center;
+}
+.gif-wave{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;
+  transform: rotateX(180deg);
+}
+.teamInfo{
+  background: white;
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  font-weight: 300;
+  transition: 500ms ease-in;
+}
+.align-center{
+  align-items: center;
+}
+.btn-start{
+  transition: width 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  min-width: 100rpx;
+  margin-top: 20rpx;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.btn-poster{
+  width: 350rpx;
+  background-color: white;
+  color: cornflowerblue;
+  font-size: large;
+  font-weight: bold;
+}
+.content{
+  text-align: center;
+}
+.text-orange {
+  color: orange;
+}
+.margin-top-sm {
+  margin-top: 20rpx;
+}
+.text-xxl {
+  font-size: 44rpx;
+}
+page{
+  overflow-y: hidden;
+  font-size: 25rpx;
+}
+.flex-direction {
+  flex-direction: column;
+}
+.flex-sub {
+  flex: 1;
+}
+.solid-right{
+  border: 0.5rpx solid transparent;
+  border-color: transparent #80808036 transparent  transparent;
+}
+.bg-blue{
+  background: cornflowerblue;
+}
+.avatar{
+  width: 130rpx;
+  height: 130rpx;
+}
+.round{
+  border-radius: 400rpx;
+}
+.shadow{
+  box-shadow: 0 1rpx 16rpx rgb(122, 122, 122);
+}
+button{
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+button::after{ border: none; } 
+.loading-dialog .weui-dialog__hd,.loading-dialog .weui-dialog__ft,.share-dialog .weui-dialog__hd{
+  display: none;
+}
+.share-dialog .weui-dialog__bd{
+  padding: 0;
+  margin: 0;
+}
+
+.share-dialog .weui-dialog{
+  width: 480rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 0;
+  border: 8px solid #2196f38c;
+}
+.loading-dialog .weui-dialog__bd{
+  padding: 0;
+  margin: 0;
+  padding-top: 35rpx;
+  transform: scale(2.5);
+}
+.loading-dialog  .weui-dialog{
+  overflow: initial;
+  width: 280rpx;
+  background: transparent;
+  height: 100rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}

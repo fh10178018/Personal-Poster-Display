@@ -1,0 +1,70 @@
+.tower-swiper {
+	min-height: 940rpx;
+  max-width: 750rpx;
+  height: 70vh;
+  transform: translateY(0px);
+}
+
+.tower-swiper .tower-item {
+	position: absolute;
+	width: 495rpx;
+	height: 1070.85rpx;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin: auto;
+	transition: all 0.2s ease-in 0s;
+	opacity: 1;
+}
+
+.tower-swiper .tower-item.none {
+	opacity: 0;
+}
+
+.tower-swiper .tower-item .swiper-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 6rpx;
+}
+.swiper-item .swiper-img {
+	width: 100%;
+	display: block;
+	height: 100%;
+	margin: 0;
+	pointer-events: none;
+}
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 160rpx - 247.5rpx);
+  z-index: var(--index);
+  filter: blur(var(--filter));
+  transition: 500ms;
+}
+.shadow-blur::before {
+  content: "";
+  display: block;
+  background: inherit;
+  filter: blur(10rpx);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10rpx;
+  left: 10rpx;
+  z-index: -1;
+  opacity: 0.4;
+  transform-origin: 0 0;
+  border-radius: inherit;
+  transform: scale(1, 1);
+  background-image: inherit;
+  background-position-x: inherit;
+  background-position-y: inherit;
+  background-size: inherit;
+  background-attachment: inherit;
+  background-origin: inherit;
+  background-clip: inherit;
+  background-color: rgb(117, 117, 117);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}

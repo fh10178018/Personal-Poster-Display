@@ -1,0 +1,38 @@
+
+<view class="flex flex-direction bg-blue" style="min-height: 100vh;">
+  <view class="teamInfo" style="height:{{!waveIsOk?'100vh':!hasUserInfo?'90vh':'160rpx'}}">
+    <block wx:if="{{hasUserInfo}}">
+      <view class="content">
+        <view style="font-size: large;">HI! {{userInfo.nickName}}</view>
+        <view>请选择一张海报, 开启为蓝之旅！</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="flex flex-direction" style="text-align:center;">
+        <icon class="iconfont icon-yonghu" style="color: cornflowerblue;font-size: 200rpx;"></icon>
+        <view style="font-size: large;">加入我们，为海洋增添一度蓝色</view>
+        <button bindtap="getUserProfile" disabled="{{loginIsloading}}" class="btn-start round" role="button" style="opacity:{{!waveIsOk?'0':'1'}};transition:500ms;background: cornflowerblue;">
+          <block wx:if="{{!loginIsloading}}">开启为蓝之旅</block>
+          <mp-loading type="dot-white" animated="{{true}}" wx:else/>
+        </button>
+      </view>
+    </block>
+  </view>
+  <view class="flex flex-sub flex-direction text-center text-grey" style="position:relative;align-items: center;">
+    <image src="../../images/wave.gif" mode="scaleToFill" class="gif-wave"  bindload="imageLoad"></image>
+    <mp-swiper bind:change="handleChange" list="{{list}}" style="width:100%;opacity: {{hasUserInfo?'1':'0'}};transition:opacity 500ms ease-in;"/>
+    <block wx:if="{{hasUserInfo}}">
+      <view class="flex flex-sub align-center">
+        <button bindtap="handleShow" class="btn-poster round" role="button">生成专属海报</button>
+      </view>
+    </block>
+  </view>
+</view>
+<painter palette="{{paintPallette}}" bind:imgOK="onImgOK" />
+<mp-dialog show="{{dialogShow}}" ext-class="share-dialog"  bindbuttontap="saveImage" buttons="{{savaStatus==='noSave'?[{text:'保存至相册'}]:savaStatus==='saving'?[{text:'保存中'}]:[{text:'保存成功!'}]}}">
+  <image src="{{imagePath}}" style="width: 480rpx; height: 1038.4rpx; "/>
+</mp-dialog>
+<mp-dialog ext-class="loading-dialog" show="{{isLoading}}" mask-closable="{{false}}">
+  <mp-loading type="dot-white" style="display: inline-block;" animated="{{true}}" show="{{true}}" />
+</mp-dialog>
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
