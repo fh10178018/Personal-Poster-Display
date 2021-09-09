@@ -1,7 +1,7 @@
 .tower-swiper {
 	min-height: 940rpx;
   max-width: 750rpx;
-  height: 70vh;
+  height: 75vh;
   transform: translateY(0px);
 }
 
@@ -26,7 +26,7 @@
 	height: 100%;
 	border-radius: 6rpx;
 }
-.swiper-item .swiper-img {
+.swiper-item image {
 	width: 100%;
 	display: block;
 	height: 100%;

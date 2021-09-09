@@ -1,7 +1,7 @@
 <view class="tower-swiper" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
   <view class="tower-item {{item.zIndex==1?'none':''}}" wx:for="{{swiperList}}" wx:key="index" style="--index:{{item.zIndex}};--left:{{item.mLeft}};--filter:{{item.mfilter * 5}}rpx;">
     <view class="swiper-item">
-      <image src="{{item.url}}" mode="aspectFill" class="shadow-blur swiper-img"></image>
+      <image src="{{item.url}}" mode="aspectFill" class="shadow-blur"></image>
     </view>
   </view>
 </view>

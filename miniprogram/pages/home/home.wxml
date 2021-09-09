@@ -1,6 +1,6 @@
 
-<view class="flex flex-direction bg-blue" style="min-height: 100vh;">
-  <view class="teamInfo" style="height:{{!waveIsOk?'100vh':!hasUserInfo?'90vh':'160rpx'}}">
+<view class="flex flex-direction" style="min-height: 100vh;">
+  <view class="teamInfo" style="height:auto;transform: translateY({{!hasUserInfo?'30vh':'2vh'}}); transition:transform 500ms ease-in-out;">
     <block wx:if="{{hasUserInfo}}">
       <view class="content">
         <view style="font-size: large;">HI! {{userInfo.nickName}}</view>
@@ -18,15 +18,16 @@
       </view>
     </block>
   </view>
-  <view class="flex flex-sub flex-direction text-center text-grey" style="position:relative;align-items: center;">
+    <view class="flex flex-direction text-center text-grey bg-blue" style="position:relative;align-items: center;height: 100vh;transform: translateY({{!waveIsOk?'100%':!hasUserInfo?'90%':'13%'}});transition:transform 500ms ease-in-out;">
     <image src="../../images/wave.gif" mode="scaleToFill" class="gif-wave"  bindload="imageLoad"></image>
-    <mp-swiper bind:change="handleChange" list="{{list}}" style="width:100%;opacity: {{hasUserInfo?'1':'0'}};transition:opacity 500ms ease-in;"/>
+    <mp-swiper bind:change="handleChange" list="{{list}}" style="width:100%;opacity: {{hasUserInfo?'1':'0'}};transition:opacity 500ms ease-in-out;"/>
     <block wx:if="{{hasUserInfo}}">
-      <view class="flex flex-sub align-center">
+      <view class="flex align-center">
         <button bindtap="handleShow" class="btn-poster round" role="button">生成专属海报</button>
       </view>
     </block>
   </view>
+
 </view>
 <painter palette="{{paintPallette}}" bind:imgOK="onImgOK" />
 <mp-dialog show="{{dialogShow}}" ext-class="share-dialog"  bindbuttontap="saveImage" buttons="{{savaStatus==='noSave'?[{text:'保存至相册'}]:savaStatus==='saving'?[{text:'保存中'}]:[{text:'保存成功!'}]}}">

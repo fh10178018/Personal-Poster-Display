@@ -40,13 +40,16 @@
   transform: rotateX(180deg);
 }
 .teamInfo{
+  top: 0;
+  left: 0;
+  right: 0;
   background: white;
   height: 300rpx;
   display: flex;
   justify-content: center;
   padding-top: 40rpx;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   align-items: center;
   font-weight: 300;
   transition: 500ms ease-in;
