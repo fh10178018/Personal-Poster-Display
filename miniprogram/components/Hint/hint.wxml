@@ -1,0 +1,6 @@
+<view class="hint-wrap">
+<view class="hint-content">
+  <view class="hint-title">左右滑动更换海报</view>
+  <image class="slider-icon" src="../../images/slider.png" mode='widthFix'/>
+</view>
+</view>
