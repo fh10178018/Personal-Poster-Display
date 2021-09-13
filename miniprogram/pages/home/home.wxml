@@ -36,4 +36,7 @@
 <mp-dialog ext-class="loading-dialog" show="{{isLoading}}" mask-closable="{{false}}">
   <mp-loading type="dot-white" style="display: inline-block;" animated="{{true}}" show="{{true}}" />
 </mp-dialog>
+
+<mp-hint wx:if="{{showHint}}"/>
+
 <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>

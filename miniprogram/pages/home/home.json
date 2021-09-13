@@ -3,6 +3,7 @@
     "mp-swiper": "../../components/swiper/swiper",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
     "painter":"../../components/painter/painter",
+    "mp-hint":"../../components/Hint/hint",
     "mp-loading": "../../components/Loading/Loading",
     "mp-toptips": "weui-miniprogram/toptips/toptips"
   },

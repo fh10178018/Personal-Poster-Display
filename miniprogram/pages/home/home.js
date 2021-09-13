@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showHint:false,
     waveIsOk:false,
     loginIsloading:false,
     isLoading:false,
@@ -120,6 +121,16 @@ Page({
               hasUserInfo: true,
               loginIsloading:false
             })
+            setTimeout(()=>{
+              that.setData({
+                showHint:true
+              })
+            },300)
+            setTimeout(()=>{
+              that.setData({
+                showHint:false
+              })
+            },2300)
           },
           fail: err =>{
             this.setData({
